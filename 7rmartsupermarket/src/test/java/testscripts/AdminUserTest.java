@@ -35,7 +35,7 @@ public class AdminUserTest extends Base {
 		loginpage.login();
 		homepage.navigateToAdminUsers();
 		String expectedButtonColor = "rgba(220, 53, 69, 1)";
-		String actualButtonColor = adminuserpage.buttonColor();
+		String   actualButtonColor = adminuserpage.buttonColor();
 		System.out.println(actualButtonColor);
 		Assert.assertEquals(actualButtonColor, expectedButtonColor);
 	}
