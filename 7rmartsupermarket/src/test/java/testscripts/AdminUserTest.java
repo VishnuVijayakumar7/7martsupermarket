@@ -56,7 +56,8 @@ public class AdminUserTest extends Base {
 	}
 
 	@Test
-	public void verifyActiveButtonIsDisplayed() {
+	public void verifyActiveButtonIsDisplayed() 
+	{
 		adminuserpage = new AdminUserPage(driver);
 		homepage = new HomePage(driver);
 		loginpage = new LoginPage(driver);
