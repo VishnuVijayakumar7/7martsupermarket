@@ -42,7 +42,7 @@ public class AdminUserTest extends Base {
 
 	@Test(dataProvider = "userData", dataProviderClass = DataProviders.class)
 	public void verifyWhetherAdminisAbletoAddUsers(String userName, String password, String userType) {
-		adminuserpage = new AdminUserPage(driver);
+		adminuserpage = new   AdminUserPage(driver);
 		homepage = new HomePage(driver);
 		loginpage = new LoginPage(driver);
 		loginpage.login();
