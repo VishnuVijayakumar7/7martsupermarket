@@ -1,10 +1,5 @@
 package testscripts;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,9 +9,8 @@ import listeners.RetryAnalyzer;
 import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
-import utilities.ExcelReader;
+
 import utilities.GeneralUtility;
-import utilities.WaitUtility;
 
 public class AdminUserTest extends Base {
 	LoginPage loginpage;
@@ -34,7 +28,7 @@ public class AdminUserTest extends Base {
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
-	public void checkNewButtonColor() {
+	public void verifyNewButtonColor() {
 		adminuserpage = new AdminUserPage(driver);
 		homepage = new HomePage(driver);
 		loginpage = new LoginPage(driver);
@@ -45,8 +39,6 @@ public class AdminUserTest extends Base {
 		System.out.println(actualButtonColor);
 		Assert.assertEquals(actualButtonColor, expectedButtonColor);
 	}
-
-	
 
 	@Test(dataProvider = "userData", dataProviderClass = DataProviders.class)
 	public void verifyWhetherAdminisAbletoAddUsers(String userName, String password, String userType) {
@@ -73,16 +65,16 @@ public class AdminUserTest extends Base {
 		Assert.assertTrue(adminuserpage.displayActiveStatus());
 
 	}
+
 	@Test
-	public void verifyWhetherAbleToSearchUsers()
-	{
+	public void verifyWhetherAbleToSearchUsers() {
 		adminuserpage = new AdminUserPage(driver);
 		homepage = new HomePage(driver);
 		loginpage = new LoginPage(driver);
 		loginpage.login();
 		homepage.navigateToAdminUsers();
-		String userName1=GeneralUtility.getRandomName();
-		adminuserpage.searchButtonClick(userName1,"Admin" );
+		String userName1 = GeneralUtility.getRandomName();
+		adminuserpage.searchButtonClick(userName1, "Admin");
 	}
 
 }
