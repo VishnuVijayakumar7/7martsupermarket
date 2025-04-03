@@ -1,0 +1,18 @@
+<suite name="regression2" thread-count="3" parallel="tests">
+<listeners>
+		<listener class-name="listeners.ExtentReporter"></listener>
+	</listeners>
+
+	<test name="execution2">
+		<classes>
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+	</test>
+	<test name="execution1">
+		<classes>
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,23 @@
+<suite name="regression2" thread-count="5" parallel="tests">
+	<test name="chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+	</test>
+	<test name="edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+	</test>
+	<test name="firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="testscripts.AdminUserTest">
+			</class>
+		</classes>
+	</test>
+</suite>
