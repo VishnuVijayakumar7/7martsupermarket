@@ -18,7 +18,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import constants.Constants;
 
-public class ExtentReporter implements IReporter // custom made listener
+public class ExtentReporter implements IReporter 
 {
 	private ExtentReports extent;
 

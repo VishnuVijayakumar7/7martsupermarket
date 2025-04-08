@@ -18,9 +18,23 @@ public class LoginTest extends Base {
 		homepage = new HomePage(driver);
 		loginpage.login("admin", "admin");
 		String expectedProfileName = "Admin";
-		String  actualProfileName = homepage.getProfileName();
+		String actualProfileName = homepage.getProfileName();
 		Assert.assertEquals(actualProfileName, expectedProfileName);
 
 	}
+	
+	@Test
+	public void verifyWhetherErrorMessageIsVisibleForInvalidCredentials()
+	{
+		loginpage = new LoginPage(driver);
+		homepage = new HomePage(driver);
+		loginpage.login("adminn0", "admin1");
+		String actualErrorMessage=loginpage.getErrorMessage();
+		String expectedErrorMessage="Invalid Username/Password";
+		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage) );
+		
+			
+	}
+	
 
 }

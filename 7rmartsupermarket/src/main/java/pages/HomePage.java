@@ -10,20 +10,40 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[@class='d-block']")
 	private WebElement profileName;
-	@FindBy(xpath="//p[text()='Admin Users']//following::a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-admin\"]")
+	@FindBy(xpath = "//p[text()='Admin Users']//following::a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-admin\"]")
 	private WebElement adminUserLink;
+	@FindBy(xpath = "(//a[@class='small-box-footer'])[4]")
+	private WebElement subCategoriesLink;
+	@FindBy(xpath = "//img[@class='img-circle elevation-2']")
+	private WebElement image;
+	@FindBy(xpath="//span[@class='brand-text font-weight-light']")
+	private WebElement title;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public String getProfileName()
-	{
+
+	public String getProfileName() {
 		return profileName.getText();
 	}
-	public AdminUserPage navigateToAdminUsers()
-	{
+
+	public AdminUserPage navigateToAdminUsers() {
 		adminUserLink.click();
 		return new AdminUserPage(driver);
 	}
+
+	public void navigateToSubCategoriesPage() {
+		subCategoriesLink.click();
+	}
+	
+	public boolean isImageDisplayed()
+	{
+		return image.isDisplayed();
+	}
+	public String getTitleName()
+	{
+		return title.getText();
+	}
+
 }

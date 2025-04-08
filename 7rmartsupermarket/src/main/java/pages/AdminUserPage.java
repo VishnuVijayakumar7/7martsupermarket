@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import utilities.PageUtility;
 import utilities.WaitUtility;
@@ -32,6 +32,12 @@ public class AdminUserPage {
 	private WebElement searchusertype;
 	@FindBy(xpath = "//button[@name='Search']")
 	private WebElement searchbutton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	private WebElement popup;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement popupdanger;
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']")
+	private WebElement searchResult;
 
 	public AdminUserPage(WebDriver driver) {
 		this.driver = driver;
@@ -56,14 +62,19 @@ public class AdminUserPage {
 
 	}
 
-	public void addNewUser(String userName, String password, String userType) {
-		WaitUtility waitutility = new WaitUtility(driver);
-		waitutility.waitForClickable(save, 20);
+	public void clickSaveButton() {
+		save.click();
+	}
+
+	public AdminUserPage addNewUser(String userName, String password, String userType) {
+		
 		clickNewButton();
 		enterUserName(userName);
 		enterPassword(password);
 		selectUserType(userType);
-		save.click();
+		clickSaveButton();
+		return this;
+		
 
 	}
 
@@ -89,11 +100,26 @@ public class AdminUserPage {
 	}
 
 	public void searchButtonClick(String userName1, String userType1) {
-		
+
 		clickSearchButton();
 		userNameSearch(userName1);
 		selectUserTypeSearch(userType1);
 		searchbutton.click();
+	}
+
+	public boolean isPopUpMessageDisplayed() {
+		return popup.isDisplayed();
+	}
+	
+	public String isDangerPopUpMessageIsDisplayed()
+	{
+		return popupdanger.getText();
+	}
+	public String showSearchResult()
+	{
+		WaitUtility waitutility = new WaitUtility(driver);
+    	waitutility.waitForClickable(searchbutton, 20);
+		return searchResult.getText();
 	}
 
 }

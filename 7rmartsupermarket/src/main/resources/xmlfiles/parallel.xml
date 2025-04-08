@@ -5,13 +5,13 @@
 
 	<test name="execution2">
 		<classes>
-			<class name="testscripts.AdminUserTest">
+			<class name="testscripts.LoginTest">
 			</class>
 		</classes>
 	</test>
 	<test name="execution1">
 		<classes>
-			<class name="testscripts.AdminUserTest">
+			<class name="testscripts.LoginTest">
 			</class>
 		</classes>
 	</test>

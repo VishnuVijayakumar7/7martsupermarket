@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T19:07:42 GMT-07:00" name="Default suite" finished-at="2025-04-02T19:08:10 GMT-07:00" duration-ms="28511">
+  <suite started-at="2025-04-07T19:35:59 GMT-07:00" name="Default suite" finished-at="2025-04-07T19:36:07 GMT-07:00" duration-ms="8105">
     <groups>
     </groups>
-    <test started-at="2025-04-02T19:07:42 GMT-07:00" name="Default test" finished-at="2025-04-02T19:08:10 GMT-07:00" duration-ms="28511">
+    <test started-at="2025-04-07T19:35:59 GMT-07:00" name="Default test" finished-at="2025-04-07T19:36:07 GMT-07:00" duration-ms="8105">
       <class name="testscripts.AdminUserTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testscripts.AdminUserTest@61322f9d]" started-at="2025-04-02T19:07:42 GMT-07:00" name="launchBrowser" finished-at="2025-04-02T19:08:01 GMT-07:00" duration-ms="19308" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testscripts.AdminUserTest@65e98b1c]" started-at="2025-04-07T19:35:59 GMT-07:00" name="launchBrowser" finished-at="2025-04-07T19:36:05 GMT-07:00" duration-ms="5829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyActiveButtonIsDisplayed()[pri:0, instance:testscripts.AdminUserTest@61322f9d]" started-at="2025-04-02T19:08:01 GMT-07:00" name="verifyActiveButtonIsDisplayed" finished-at="2025-04-02T19:08:10 GMT-07:00" duration-ms="9018" status="PASS">
+        <test-method signature="verifyActiveButtonIsDisplayed()[pri:0, instance:testscripts.AdminUserTest@65e98b1c]" started-at="2025-04-07T19:36:05 GMT-07:00" name="verifyActiveButtonIsDisplayed" finished-at="2025-04-07T19:36:07 GMT-07:00" duration-ms="2160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyActiveButtonIsDisplayed -->
-        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUserTest@61322f9d]" started-at="2025-04-02T19:08:10 GMT-07:00" name="terminateSession" finished-at="2025-04-02T19:08:10 GMT-07:00" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUserTest@65e98b1c]" started-at="2025-04-07T19:36:07 GMT-07:00" name="terminateSession" finished-at="2025-04-07T19:36:07 GMT-07:00" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyActiveButtonIsDisplayed status=SUCCESS method=AdminUserTest.verifyActiveButtonIsDisplayed()[pri:0, instance:testscripts.AdminUserTest@61322f9d] output={null}]]]>
+                <![CDATA[[TestResult name=verifyActiveButtonIsDisplayed status=SUCCESS method=AdminUserTest.verifyActiveButtonIsDisplayed()[pri:0, instance:testscripts.AdminUserTest@65e98b1c] output={null}]]]>
               </value>
             </param>
           </params>

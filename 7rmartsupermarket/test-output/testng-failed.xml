@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [regression2]">
+  <listeners>
+    <listener class-name="listeners.ExtentReporter"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="execution2(failed)">
     <classes>
       <class name="testscripts.AdminUserTest">
         <methods>
-          <include name="verifyWhetherAbleToSearchUsers"/>
+          <include name="verifyWhetherAbleToCreateNewUser"/>
           <include name="launchBrowser"/>
           <include name="launchBrowser"/>
           <include name="terminateSession"/>
         </methods>
       </class> <!-- testscripts.AdminUserTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- execution2(failed) -->
+</suite> <!-- Failed suite [regression2] -->

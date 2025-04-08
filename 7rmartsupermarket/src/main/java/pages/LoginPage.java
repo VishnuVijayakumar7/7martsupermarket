@@ -20,6 +20,8 @@ public class LoginPage {
 	private WebElement passwordfield;
 	@FindBy(xpath = "//button[@class='btn btn-dark btn-block']")
 	private WebElement signinbutton;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement errorMessage;
 
 	public LoginPage(WebDriver driver) {
 
@@ -61,5 +63,9 @@ public class LoginPage {
 		enterPasswordOnPasswordField(password);
 		clickOnSigninButton();
 		return new HomePage(driver);
+	}
+	public String getErrorMessage()
+	{
+		return errorMessage.getText();
 	}
 }
