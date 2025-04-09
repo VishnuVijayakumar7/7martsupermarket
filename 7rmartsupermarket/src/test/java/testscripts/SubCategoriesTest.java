@@ -1,5 +1,6 @@
 package testscripts;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
@@ -22,7 +23,10 @@ public class SubCategoriesTest extends Base {
 		loginpage.login();
 		homepage.navigateToSubCategoriesPage();
 		String subCategoryName = GeneralUtility.getRandomName();
-		subcategoriespage.addNewSubCategory("Accessories",subCategoryName , Constants.IMAGE);
+		subcategoriespage.addNewSubCategory("Vegetables",subCategoryName , Constants.IMAGE);
+		String actualResult=subcategoriespage.isAlertMessageVisible();
+		String expectedResult="Sub Category Created Successfully";
+		Assert.assertTrue(actualResult.contains(expectedResult));
 		
 	}
 }

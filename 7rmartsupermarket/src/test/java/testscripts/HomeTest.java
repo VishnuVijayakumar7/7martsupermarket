@@ -23,6 +23,7 @@ public class HomeTest extends Base {
 	@Test
 	public void verifyTitleName()
 	{
+	
 		homepage = new HomePage(driver);
 		loginpage = new LoginPage(driver);
 		loginpage.login();

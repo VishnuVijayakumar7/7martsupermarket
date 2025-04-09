@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.LoginTest">
+      <class name="testscripts.SubCategoriesTest">
         <methods>
-          <include name="verifyWhetherErrorMessageIsVisibleForInvalidCredentials"/>
           <include name="launchBrowser"/>
           <include name="launchBrowser"/>
           <include name="terminateSession"/>
+          <include name="verifyWhetherAbleToAddNewSubCategory"/>
         </methods>
-      </class> <!-- testscripts.LoginTest -->
+      </class> <!-- testscripts.SubCategoriesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

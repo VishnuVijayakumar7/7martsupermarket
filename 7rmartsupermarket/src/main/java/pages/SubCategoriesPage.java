@@ -20,6 +20,8 @@ public class SubCategoriesPage {
 	private WebElement fileUpload;
 	@FindBy(xpath = "//button[@name='create']")
 	private WebElement saveButton;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	private WebElement alert;
 
 	public SubCategoriesPage(WebDriver driver) {
 		this.driver = driver;
@@ -57,6 +59,10 @@ public class SubCategoriesPage {
 		enterSubCategory(subCategory1);
 		insertFile(path);
 		clickSave();
+	}
+	public String isAlertMessageVisible()
+	{
+		return alert.getText();
 	}
 
 }
